@@ -1,5 +1,5 @@
 # Azure VMSS Custom Auto Scale
-Currently Azure Virutual Machive Scale Sets (VMSS) doesn't support custom logic based auto scaling.
+Currently Azure Virutual Machine Scale Sets (VMSS) doesn't support custom logic based [auto scaling](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/insights-advanced-autoscale-virtual-machine-scale-sets).
 
 This solution was developed for real customer need,
 It based on Azure Function App which triggered by timer and samples SQL stored procedure to get current load on VMSS,
