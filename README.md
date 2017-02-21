@@ -5,7 +5,7 @@ This solution was developed for real customer need,
 It based on Azure Function App which triggered by timer and samples SQL stored procedure to get current load on VMSS,
 Azure Function then adds or removes VMs accordingly to configured threshold.
 
-You can clone this repo and create your own custom logic, just create a new class library and implement from [ILoadWatcher](https://github.com/guybartal/AzureVmssCustomAutoScale/blob/master/vmssAutoScale.Interfaces/ILoadWatcher.cs) interface.
+You can clone this repo and create your own custom logic, just create a new class library and implement [ILoadWatcher](https://github.com/guybartal/AzureVmssCustomAutoScale/blob/master/vmssAutoScale.Interfaces/ILoadWatcher.cs) interface.
 
 There's also console app for testing locally.
 
