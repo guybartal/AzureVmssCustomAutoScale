@@ -22,7 +22,7 @@ namespace vmssAutoScaleConsole
 
                 t.Wait();
                 Trace.WriteLine("Pausing for one minute");
-                Task.Delay(60000).Wait();
+                Task.Delay(60*1000*15).Wait();
             }
         }
 

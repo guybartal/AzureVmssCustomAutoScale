@@ -71,12 +71,14 @@ namespace vmssAutoScale.BL
                 // sample load watcher for current queule lenght
                 OnTraceEvent("querying load watcher");
                 double length = _loadWatcher.GetCurrentLoad();
+                OnTraceEvent($"Current load is {length}");
 
                 // check if current queque lenght is above or below threshold
                 if (length > _maxThreshold || length < _minThreshold)
                 {
                     OnTraceEvent($"getting currect vmss sku...");
                     dynamic sku = await GetVMSSCapacityAsync();
+                    //OnTraceEvent($"sku={JsonConvert.SerializeObject(sku)}");
                     int current = sku.capacity;
 
                     if (length > _maxThreshold)

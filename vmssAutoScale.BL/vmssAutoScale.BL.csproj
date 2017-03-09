@@ -73,7 +73,8 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)$(TargetFileName)" "$(SolutionDir)vmssAutoScale\bin\$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)$(TargetFileName)" "$(SolutionDir)vmssAutoScale\bin\$(TargetFileName)"
+copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)Microsoft.IdentityModel.Clients.ActiveDirectory*.dll" "$(SolutionDir)vmssAutoScale\bin\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
