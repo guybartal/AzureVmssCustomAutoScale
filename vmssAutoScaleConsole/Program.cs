@@ -21,8 +21,9 @@ namespace vmssAutoScaleConsole
                 Task t = autoScaler.AutoScale();
 
                 t.Wait();
-                Trace.WriteLine("Pausing for one minute");
-                Task.Delay(60*1000*15).Wait();
+                double minutes = 0.1;
+                Trace.WriteLine($"Pausing for {minutes} minutes");
+                Task.Delay((int)(60*1000 * minutes)).Wait();
             }
         }
 

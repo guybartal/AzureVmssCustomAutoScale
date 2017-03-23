@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.8.999, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
       <Private>True</Private>
@@ -74,7 +78,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)$(TargetFileName)" "$(SolutionDir)vmssAutoScale\bin\$(TargetFileName)"
-copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)Microsoft.IdentityModel.Clients.ActiveDirectory*.dll" "$(SolutionDir)vmssAutoScale\bin\"</PostBuildEvent>
+copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)Microsoft.IdentityModel.Clients.ActiveDirectory*.dll" "$(SolutionDir)vmssAutoScale\bin\"
+copy /Y "$(SolutionDir)$(ProjectName)\$(OutDir)Microsoft.ApplicationInsights*.dll" "$(SolutionDir)vmssAutoScale\bin\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,8 +8,8 @@ namespace vmssAutoScale.BL
 {
     public enum ScaleDirection
     {
-        Up,
-        Down
+        Out,
+        In
     }
 
 }
