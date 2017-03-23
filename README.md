@@ -1,11 +1,11 @@
 # Azure VMSS Custom Auto Scale
-Currently Azure Virutual Machive Scale Sets (VMSS) doesn't support custom logic based auto scaling.
+Currently Azure Virtual Machine Scale Sets (VMSS) doesn't support custom logic based [auto scaling](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/insights-advanced-autoscale-virtual-machine-scale-sets).
 
 This solution was developed for real customer need,
 It based on Azure Function App which triggered by timer and samples SQL stored procedure to get current load on VMSS,
 Azure Function then adds or removes VMs accordingly to configured threshold.
 
-You can clone this repo and create your own custom logic, just create a new class library and implement from ILoadWatcher interface.
+You can clone this repo and create your own custom logic, just create a new class library and implement [ILoadWatcher](https://github.com/guybartal/AzureVmssCustomAutoScale/blob/master/vmssAutoScale.Interfaces/ILoadWatcher.cs) interface.
 
 There's also console app for testing locally.
 
