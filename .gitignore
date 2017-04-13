@@ -246,4 +246,4 @@ ModelManifest.xml
 **/App.Release.config
 **/appsettings.test.json
 
-PublishProfiles/
+**/PublishProfiles/

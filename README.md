@@ -28,6 +28,8 @@ There's also console app for testing locally.
     <add key="MinScale" value="minimum server capacity limit"/>
     <add key="MaxThreshold" value="maximum threshold for auto scale, above this value autoscaler will add one server to vmss"/>
     <add key="MinThreshold" value="minimum threshold for auto scale, below this value autoscaler will remove one server to vmss"/>
+    <add key="ScaleOutBy" value="How many servers to add while scaling out"/>
+    <add key="ScaleInBy" value="How many servers to remove while scaling in"/>
     <add key="SQLConnectionString" value="sql server connection string which holds logic for autoscale"/>
     <add key="ClientId" value="application key in azure active directory"/>
     <add key="ClientSecret" value="application secret in azure active directory"/>
@@ -37,5 +39,7 @@ There's also console app for testing locally.
     <add key="VmssName" value="vmss name"/>
     <add key="AzureArmApiBaseUrl" value="https://management.azure.com/"/>
     <add key="VmssApiVersion" value="2016-03-30"/>
+    <add key="ApplictionInsightsInstrumentationKey" value="Appliction Insights InstrumentationKey for metric and event tracking"/>
+    <add key="ApplicationInsightsLoadWacherMetricName" value="Name of the metric you want to apear in AI for your custom load watcher, for example: Average Request Count Per Server"/>
   </appSettings>
  ```
