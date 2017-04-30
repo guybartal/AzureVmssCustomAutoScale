@@ -229,11 +229,11 @@ namespace vmssAutoScale.BL
 
             if (scaleDirection == ScaleDirection.Out)
             {
-                Sku.capacity += 1;
+                Sku.capacity += this._scaleOutBy;
             }
             else
             {
-                Sku.capacity -= 1;
+                Sku.capacity -= this._scaleInBy;
             }
 
             OnTraceEvent($"setting currect vmss capacity from {current} to {JsonConvert.SerializeObject(Sku.capacity)}");
